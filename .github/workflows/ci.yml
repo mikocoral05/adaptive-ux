@@ -10,6 +10,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write # Needed to push the version tag and release notes
+      issues: write # Needed to comment on released issues
+      pull-requests: write # Needed to comment on released PRs
+
     strategy:
       matrix:
         node-version: [20.x]
