@@ -1,0 +1,57 @@
+{
+  "name": "adaptive-ux",
+  "version": "1.0.0",
+  "description": "A 'Lite Mode' Manager for web apps.",
+  "keywords": [
+    "adaptive-ux",
+    "lite-mode",
+    "performance",
+    "network",
+    "battery"
+  ],
+  "homepage": "https://github.com/mikocoral05/adaptive-ux#readme",
+  "bugs": {
+    "url": "https://github.com/mikocoral05/adaptive-ux/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikocoral05/adaptive-ux.git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/ --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare": "husky"
+  },
+  "author": "Michael angelo Corral",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "@types/jest": "^29.5.12",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "babel-jest": "^30.3.0",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "msw": "^2.2.13",
+    "prettier": "^3.2.5",
+    "ts-jest": "^29.1.2",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "whatwg-fetch": "^3.6.20"
+  },
+  "files": [
+    "dist"
+  ]
+}
